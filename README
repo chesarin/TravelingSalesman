@@ -1,3 +1,12 @@
-Cesar Vargas 
+Queens College, CUNY
+Antonio Cesar Vargas 
 AI FALL 2010
-TravelingSalesman README
+This project tries to solve the traveling salesman problem using the A* 
+algorithm. There are 3 h* functions which can be used to measure which 
+h* functions does a better job. 
+
+Input File:
+A pair of nodes and the cost of the edge between them.
+
+Output File:
+A text files showing the solutions to the puzzle if there is one.
