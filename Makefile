@@ -14,4 +14,4 @@ execute.o: execute.cpp
 	$(CC) $(CFLAGS) execute.cpp
 
 clean:
-	rm -rf *o traveling
+	rm -rf *o traveling.exe
