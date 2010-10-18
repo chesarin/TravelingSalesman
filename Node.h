@@ -6,6 +6,7 @@ class Node{
   double f,h;
   Node* father;
   Node(){ father=NULL; };
-  Node(int i, Node* f=0):id(i),father(f){};
+ Node(int i, Node* f=0):id(i),father(f){};
+ set_id(int i):id(i);
 };
 #endif
