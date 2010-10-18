@@ -1,3 +1,7 @@
+/*A Cesar Vargas
+ *AI Fall 2010
+ *Node.h
+ */
 #ifndef NODE_H_
 #define NODE_H_
 class Node{
