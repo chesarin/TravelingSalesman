@@ -11,6 +11,7 @@ class Node{
   Node* father;
   Node(){ father=NULL; };
  Node(int i, Node* f=0):id(i),father(f){};
- set_id(int i):id(i);
+  void set_id(int i){id=i;};
+  void set_father(Node* f){ father=f;};
 };
 #endif

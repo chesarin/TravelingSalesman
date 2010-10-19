@@ -6,6 +6,7 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+#include "Node.h"
 using namespace std;
 void parse(string input);
 vector<int> nodes;
