@@ -13,8 +13,12 @@ class Node{
  Node():present(false){ father=NULL; };
  Node(int i, Node* f=0):id(i),father(f){};
   void set_id(int i){id=i;};
+<<<<<<< HEAD
   void set_cost(int i){cost=i;};
   void set_presence(){present=true;};
   bool is_present(){ return present;};
+=======
+  void set_father(Node* f){ father=f;};
+>>>>>>> f1ff7fb26850f1f38b43b5e170c01f8ccd90085a
 };
 #endif
