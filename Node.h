@@ -6,11 +6,15 @@
 #define NODE_H_
 class Node{
  public:
-  int id,num_level,g;
+  int id,num_level,g,cost;
   double f,h;
+  bool present;
   Node* father;
-  Node(){ father=NULL; };
+ Node():present(false){ father=NULL; };
  Node(int i, Node* f=0):id(i),father(f){};
- set_id(int i):id(i);
+  void set_id(int i){id=i;};
+  void set_cost(int i){cost=i;};
+  void set_presence(){present=true;};
+  bool is_present(){ return present;};
 };
 #endif
