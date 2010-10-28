@@ -7,11 +7,14 @@ CFLAGS=-c -g -Wall
 
 all: traveling
 
-traveling: execute.o
-	$(CC) execute.o -o traveling.exe
+traveling: execute.o Graph.o
+	$(CC) execute.o Graph.o -o traveling.exe
 
 execute.o: execute.cpp
 	$(CC) $(CFLAGS) execute.cpp
 
+graph.o: Graph.cpp
+	$(CC) $(CFLAGS) Graph.cpp
+
 clean:
-	rm -rf *o traveling.exe
+	rm -rf *o traveling.exe 
