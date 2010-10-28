@@ -10,7 +10,7 @@ class Node{
   double f,h;
   bool present;
   Node* father;
- Node():present(false){ father=NULL; };
+ Node():present(false){ father=0; };
  Node(int i, Node* f=0):id(i),father(f){};
   void set_id(int i){id=i;};
   void set_cost(int i){cost=i;};
