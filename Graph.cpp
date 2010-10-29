@@ -22,6 +22,10 @@ void Graph::print(){
     }
   }
 }
+/*
+ *find_lowest(int node_num)
+ *find the child with lowest path cost on node node_num
+ */
 void Graph::find_lowest(int node_num){
   Node lowest = matrix[node_num][1];
   int location=1;
