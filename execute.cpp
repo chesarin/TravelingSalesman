@@ -45,4 +45,5 @@ void graph(){
   test.find_lowest(2);
   test.find_lowest(3);
   test.find_lowest(4);
+  test.update_h(1,2);
 }

@@ -11,6 +11,7 @@
 using namespace std;
 class Graph{
  private:
+  int cities_visited;
   int size;
   Node matrix[MAX][MAX];
  public:
@@ -18,5 +19,7 @@ class Graph{
   void create(const vector <int>& in);
   void print();
   void find_lowest(int node_num);
+  void update_h(int node_num, int nodes_left);
+  void explore(int begin);
 };
 #endif
