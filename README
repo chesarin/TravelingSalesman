@@ -10,3 +10,11 @@ A pair of nodes and the cost of the edge between them.
 
 Output File:
 A text files showing the solutions to the puzzle if there is one.
+
+H Functions:
+H1:The Average cost of outgoing edges at node n to all children nodes that are reachable
+times cities remain to be visited.
+
+Example:Let's say we have 5 cities, since the start node needs to go back to 
+itself the total of cities is 6. Everytime we move an additional level we substract
+from 6 not 5. This is due to the fact that we have to go back to the start node.
