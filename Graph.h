@@ -17,5 +17,6 @@ class Graph{
   Graph();
   void create(const vector <int>& in);
   void print();
+  void find_lowest(int node_num);
 };
 #endif

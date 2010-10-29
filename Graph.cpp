@@ -22,3 +22,20 @@ void Graph::print(){
     }
   }
 }
+void Graph::find_lowest(int node_num){
+  Node lowest = matrix[node_num][1];
+  int location=1;
+  for ( int j=1 ; j < MAX ; j++ ){
+    if ( matrix[node_num][j].is_present() ){
+      if ( lowest.cost == 0 ){
+	lowest = matrix[node_num][j];
+	location = j;
+      }
+      if ( matrix[node_num][j].cost < lowest.cost ){
+	lowest = matrix[node_num][j];
+	location = j;
+      }
+    }
+  }
+  cout << "The lowest cost from node " << node_num << " to node " << location << " is " << lowest.cost << endl;
+}
