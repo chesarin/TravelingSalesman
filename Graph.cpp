@@ -24,7 +24,7 @@ void Graph::print(){
   }
 }
 /*
- *find_lowest(int node_num)
+ *Find_lowest(int node_num)
  *find the child with lowest path cost on node node_num
  */
 void Graph::find_lowest(int node_num){
@@ -44,16 +44,27 @@ void Graph::find_lowest(int node_num){
   }
   cout << "The lowest cost from node " << node_num << " to node " << location << " is " << lowest.cost << endl;
 }
-void Graph::update_h(int node_num, int nodes_left){
+void Graph::update_children_h(int node_num){
+  for ( int j=1 ; j < MAX ; j++ ){
+    if ( matrix[node_num][j].is_present() ){
+      matrix[node_num][j].h = matrix[node_num][0].h;
+    }
+  }
+}
+void Graph::calculate_h(int node_num, int nodes_left){
   float total_cost=0,cost=0;
   int nodes=0;
+  //let's find how many child nodes we have and calculate the h at this level
   for ( int j=1 ; j < MAX ; j++ ){
     if ( matrix[node_num][j].is_present() ){
       total_cost += matrix[node_num][j].cost;
       nodes++;
     }
   }
+  //we have the h, I'm calling it cost here it should be h at this level
   cost = (total_cost / nodes) * nodes_left;
+  //let's store at matrix[node_num][0]
+  matrix[node_num][0].h = cost;
   cout << "Total cost at node " << node_num << " is " << cost << endl;
 }
 void Graph::explore(int begin){
@@ -69,4 +80,14 @@ void Graph::explore(int begin){
     //Repeat this until we have visited all nodes
     //
   }
+}
+void Graph::calculate_children_f(int node_num){
+  for ( int j = 1 ; j < MAX ; j++ ){
+    if ( matrix[node_num][j].is_present() ){
+      matrix[node_num][j].calculate_f();
+    }
+  }
+}
+void Graph::expand(int node_num){
+  
 }
