@@ -36,10 +36,10 @@ void Graph::print(){
  *find the child with lowest path cost on node node_num
  */
 int Graph::find_lowest(int node_num){
-  Node lowest = matrix[node_num][1];
+  Node lowest ;
   int location=1;
   for ( int j=1 ; j < size ; j++ ){
-    if ( matrix[node_num][j].is_present() && look_up(node_num)){
+    if ( matrix[node_num][j].is_present() && !look_up(j)){
       if ( lowest.cost == 0 ){
 	lowest = matrix[node_num][j];
 	location = j;
