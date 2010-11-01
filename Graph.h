@@ -29,5 +29,6 @@ class Graph{
   void expand(int node_num);
   void calculate_size();
   bool look_up(int node_num);
+  void print_list();
 };
 #endif
