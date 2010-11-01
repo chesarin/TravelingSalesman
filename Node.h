@@ -11,7 +11,7 @@ class Node{
   bool present;
   Node* father;
  Node():present(false){ father=0; children=0;cost=0;};
- Node(int i, Node* f=0):id(i),father(f){children=0;};
+ Node(int i, Node* f=0):id(i),father(f){children=0;cost=0;};
   void set_id(int i){id=i;};
   void set_cost(int i){cost=i;};
   void set_presence(){present=true;};
