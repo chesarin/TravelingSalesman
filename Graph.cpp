@@ -91,18 +91,6 @@ void Graph::explore(int total_nodes,int start_node){
     temp = find_lowest(start_node);
     explore ( total_nodes-1,temp );
   }
-  // int explored=0;
-  // while ( explored != size ){
-  //calculate the h*, this will be the same for all child nodes
-  //look at the README file
-  //the g* is the actual path cost towards this node this will be different
-  //for all of them
-  //f* is the sum of the g* and h* functions
-  //f* will be diferent for all children nodes
-  //Expand the child node with the smallest f* function
-  //Repeat this until we have visited all nodes
-  //
-  // }
 }
 void Graph::calculate_children_f(int node_num){
   for ( int j = 1 ; j < size ; j++ ){
@@ -119,15 +107,15 @@ void Graph::expand(int node_num){
 bool Graph::look_up(int node_num){
   bool is_there=false;
   list<int>::iterator i;
-  cout << "in look_up function , node_num " << node_num << endl;
+  //  cout << "in look_up function , node_num " << node_num << endl;
   for ( i=openlist.begin() ; i != openlist.end() ; ++i){
     if ( *i == node_num ){
-      cout << "node_num " << node_num << " *i " << *i << endl;
+      //  cout << "node_num " << node_num << " *i " << *i << endl;
       is_there=true;
       break;
     }
   }
-  cout << "is_there " << is_there << endl;
+  //  cout << "is_there " << is_there << endl;
   return is_there;
 }
 void Graph::print_list(){
