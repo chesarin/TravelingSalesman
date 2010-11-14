@@ -41,7 +41,7 @@ void graph(){
   cout << "in graph method" << endl;
   test.create(nodes);
   test.print();
-  test.explore(6,1);
+  test.explore(21,1);
   // test.find_lowest(1);
   // test.find_lowest(2);
   // test.find_lowest(3);
