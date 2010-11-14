@@ -4,7 +4,7 @@
  */
 #ifndef GRAPH_H_
 #define GRAPH_H_
-#define MAX 20
+#define MAX 40
 #include "Node.h"
 #include <vector>
 #include <iostream>
